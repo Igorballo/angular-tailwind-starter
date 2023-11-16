@@ -1,0 +1,55 @@
+<div *ngIf="event"
+     class="w-full flex flex-col relative overflow-hidden bg-cover bg-no-repeat rounded-lg shadow-lg"
+>
+  <img
+    class="w-full h-[15rem] object-cover absolute mix-blend-normal transition duration-300 ease-in-out"
+    [src]="event.image"
+  />
+  <div class="flex justify-between p-6 relative">
+    <h1 class="bg-white bg-opacity-60 justify-center rounded font-semibold py-1 px-6">
+      Libelle de l'evenement
+    </h1>
+    <svg
+      class="hover:cursor-pointer"
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="15" cy="15" r="15" fill="white" />
+      <path
+        d="M15 23.0125L13.9125 22.0225C10.05 18.52 7.5 16.2025 7.5 13.375C7.5 11.0575 9.315 9.25 11.625 9.25C12.93 9.25 14.1825 9.8575 15 10.81C15.8175 9.8575 17.07 9.25 18.375 9.25C20.685 9.25 22.5 11.0575 22.5 13.375C22.5 16.2025 19.95 18.52 16.0875 22.0225L15 23.0125Z"
+        fill="#E31C5F"
+      />
+    </svg>
+  </div>
+  <div class="grid grid-cols-4 gap-4 bg-[#FFFFFF] flex-1 p-6 mt-[9rem]">
+    <div
+      class="col-span-1 justify-center flex flex-col items-center pl-6 pr-10"
+    >
+      <p class="text-[#066A04] font-bold capitalize text-xl">
+        {{ event.month }}
+      </p>
+      <span class="text-[#000000] text-2xl lg:text-3xl">
+            {{ event.day }}
+          </span>
+    </div>
+
+    <div class="col-span-3">
+      <h3 class="flex-1 text-md font-bold uppercase">
+        {{ event.title }}
+      </h3>
+      <p class="flex-1 py-1 text-sm leading-snug line-clamp-4">
+        {{ event.description }}
+      </p>
+      <div class="flex flex-wrap w-full items-center pt-1 space-x-2 text-xs">
+        <button (click)="showEvent()"
+          class="bg-[#066A04] text-white font-bold py-2 px-6 hover:cursor-pointer"
+        >
+          Voir détails
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

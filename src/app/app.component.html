@@ -1,41 +1,30 @@
 <div>
-  <div class="ma-balise bg-yellow-500 mb-20 px-4 lg:px-0">
-    <div class="container mx-auto flex items-center justify-between gap-4 py-2 text-white">
-      <h1 class="text-xs lg:text-sm font-medium">
-        Ne manquez plus rien ! Téléchargez dès maintenant notre application mobile.
-      </h1>
+  <div class="bg-white">
+    <div class="bg-white w-full">
+      <div class="mx-auto mx-24">
+        <div class="flex justify-between">
+          <div class="inline-flex items-center gap-8">
+            <img class="h-full w-12 py-1.5" src="assets/images/logo.svg" alt="logo">
+            <ul class="inline-flex items-end h-full gap-8">
+              <li class="text-lg text-blue-400 pb-3 border-b-8 border-blue-600">Page Jaune</li>
+              <li class="text-lg text-blue-400 pb-3 border-b-8 border-blue-600">Page Jaune</li>
+            </ul>
+          </div>
 
-      <div class="flex flex-col lg:flex-row items-center gap-x-3">
-        <a
-          href="https://apps.apple.com/bj/app/meks-events-togo/id6448987048"
-          target="_blank"
-          class="w-32 transition duration-300 hover:shadow-lg"
-        >
-          <img
-            src="https://kitwind.io/assets/kometa/app-store.png"
-            class="object-cover object-top w-full h-auto mx-auto"
-            alt=""
-          />
-        </a>
-        <a
-          href="https://play.google.com/store/apps/details?id=tg.meg.met&hl=fr&gl=US"
-          target="_blank"
-          class="w-32 transition duration-300 hover:shadow-lg"
-        >
-          <img
-            src="https://kitwind.io/assets/kometa/google-play.png"
-            class="object-cover object-top w-full h-auto mx-auto"
-            alt=""
-          />
-        </a>
+          <p-button label="Check" icon="pi pi-check"></p-button>
+
+          <div class="inline-flex items-center gap-4 py-2">
+            <button class="bg-blue-300 rounded-full shadow-lg px-6 py-2 text-sm text-black">Se referencer</button>
+            <button class="bg-white rounded-full p-2 inline-flex justify-center items-center border border-black"></button>
+            <button class="bg-white rounded-full border border-black px-6 py-2 text-sm text-black">Mon compte</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div *ngIf="currentEvent" class="my-6">
-    <h1 class="mb-4 text-center text-2xl font-bold">Detail de l'evenement</h1>
-    <span class="px-12 py-4 border-l-4 border-blue-600">Description: {{ currentEvent.title }} </span>
+    <div class="w-full h-full">
+      <img class="w-full h-full bg-contain bg-auto" src="https://images.unsplash.com/photo-1580470846411-b0e734c5ffd6?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="banniere-ecole">
+    </div>
   </div>
-
-  <app-event-list (showDetails)="onShowDetails($event)" [events]="events"></app-event-list>
 </div>
+
